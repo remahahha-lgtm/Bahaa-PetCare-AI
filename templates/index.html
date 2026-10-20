@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bahaa PetCare AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main class="shell">
+    <aside class="side">
+      <div class="paw" aria-hidden="true">🐾</div>
+      <h1>Bahaa<br>PetCare AI</h1>
+      <p class="tagline">Calm, clear answers for the animals you love.</p>
+      <div class="topics" role="list">
+        <button class="chip" data-q="How much should I feed my adult dog each day?">Feeding</button>
+        <button class="chip" data-q="How do I stop my puppy from biting?">Training</button>
+        <button class="chip" data-q="How often should I groom my cat?">Grooming</button>
+        <button class="chip" data-q="Why is my pet hiding and acting strange?">Behavior</button>
+        <button class="chip" data-q="Which vaccines does my kitten need?">Health basics</button>
+      </div>
+      <p class="note">Not a replacement for a vet. In an emergency, call your clinic right away.</p>
+    </aside>
+
+    <section class="chat" aria-label="Chat with Bahaa PetCare AI">
+      <div id="log" class="log" aria-live="polite">
+        <div class="msg bot">Hi, I'm Bahaa PetCare AI. Tell me about your pet and what you need help with.</div>
+      </div>
+      <div class="composer">
+        <textarea id="input" rows="1" placeholder="Ask about feeding, training, health…" aria-label="Your message"></textarea>
+        <button id="send" class="send">Send</button>
+      </div>
+    </section>
+  </main>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
